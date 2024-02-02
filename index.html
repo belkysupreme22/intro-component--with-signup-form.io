@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-container">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <p class="free-trial">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </p>
+        <div class="form" id="form">
+          <div class="inp">
+            <input type="text" placeholder="First Name" id="fname" />
+            <div id="error" class="errorMessage"></div>
+          </div>
+          <div class="inp">
+            <input type="text" placeholder="Last Name" id="lname" />
+            <div id="error" class="errorMessage"></div>
+          </div>
+          <div class="inp">
+            <input type="text" placeholder="Email" id="email" />
+            <div id="error" class="errorMessage"></div>
+          </div>
+          <div class="inp">
+            <input type="password" placeholder="Password" id="pass" />
+            <div id="error" class="errorMessage"></div>
+          </div>
+          <button type="submit" id="btn">Claim your free trial</button>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("form");
+      const fName = document.getElementById("fname");
+      const lName = document.getElementById("lname");
+      const email = document.getElementById("email");
+      const password = document.getElementById("pass");
+      const button = document.getElementById("btn");
+
+      form.addEventListener("click", (e) => {
+        e.preventDefault();
+        validate();
+      });
+
+      function validate() {
+        const nameError = document.querySelector("#fname + .errorMessage");
+        if (fname.value == "") {
+          nameError.textContent = "First name can not be empty";
+
+          fname.parentNode.classList.add("error");
+          fname.parentNode.classList.add("icon");
+          fname.parentNode.classList.remove("success");
+        } else {
+          nameError.textContent = "";
+          fname.parentNode.classList.add("success");
+          fname.parentNode.classList.remove("error");
+          fname.parentNode.classList.remove("icon");
+        }
+        const lnameError = document.querySelector("#fname + .errorMessage");
+        if (lname.value == "") {
+          lnameError.textContent = "Last name can not be empty";
+
+          lname.parentNode.classList.add("error");
+          lname.parentNode.classList.add("icon");
+          lname.parentNode.classList.remove("success");
+        } else {
+          nameError.textContent = "";
+          lname.parentNode.classList.add("success");
+          lname.parentNode.classList.remove("error");
+          lname.parentNode.classList.remove("icon");
+        }
+
+        const passError = document.querySelector("#pass + .errorMessage");
+        if (password.value == "") {
+          passError.textContent = "Password can not be empty";
+
+          password.parentNode.classList.add("error");
+          password.parentNode.classList.add("icon");
+          password.parentNode.classList.remove("success");
+        } else {
+          passError.textContent = "";
+          password.parentNode.classList.add("success");
+          password.parentNode.classList.remove("error");
+          password.parentNode.classList.remove("icon");
+        }
+
+        const emailError = document.querySelector("#email + .errorMessage");
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if (!email.value.match(emailRegex)) {
+          emailError.textContent = "Looks like this is not a valid email";
+
+          email.parentNode.classList.add("error");
+          email.parentNode.classList.add("icon");
+          email.parentNode.classList.remove("success");
+        } else {
+          emailError.textContent = "";
+          email.parentNode.classList.add("success");
+          email.parentNode.classList.remove("error");
+          email.parentNode.classList.remove("icon");
+        }
+      }
+    </script>
+  </body>
+</html>
