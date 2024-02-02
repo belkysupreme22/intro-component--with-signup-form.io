@@ -4,7 +4,6 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ## Table of contents
 
-- [Screenshot](#screenshot)
 - [Links](#links)
 - [My process](#my-process)
 
@@ -15,14 +14,10 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 - [Author](#author)
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-sign-up-form-using-flexbox-b8tNjC4LId](https://your-solution-url.com)
+- Live Site URL: [https://belkysupreme22.github.io/intro-component--with-signup-form.io/](https://your-live-site-url.com)
 
 ## My process
 
@@ -36,7 +31,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Useful resources
 
-- [](https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript) - This helped me for checking for valid email inputs. I really liked this pattern and will use it going forward.
+- [https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript](https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript) - This helped me for checking for valid email inputs. I really liked this pattern and will use it going forward.
 
 ## Author
 
