@@ -146,6 +146,7 @@ button:hover {
     text-align: left;
   }
   h1 {
+    line-height: 55px;
     font-size: 3.5rem;
   }
   .text-container p {
