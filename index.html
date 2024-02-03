@@ -121,7 +121,8 @@
 
         if (!email.value.match(emailRegex)) {
           emailError.textContent = "Looks like this is not a valid email";
-
+          email.value = "example@gmail/com";
+          email.style.color = "red";
           email.parentNode.classList.add("error");
           email.parentNode.classList.add("icon");
           email.parentNode.classList.remove("success");
